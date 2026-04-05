@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manifesto per la civiltà demianista</title>
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-96x96.png" type="image/png" sizes="96x96">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Source Serif 4', Georgia, serif;
+      color: #cfcfd4;
+      font-size: 21px;
+      line-height: 1.8;
+      background: radial-gradient(circle at 20% 20%, rgba(53, 50, 126, 0.28), transparent 60%),
+                  radial-gradient(circle at 80% 30%, rgba(53, 50, 126, 0.22), transparent 65%),
+                  radial-gradient(circle at 50% 80%, rgba(53, 50, 126, 0.35), transparent 70%),
+                  #000000;
+      min-height: 100vh;
+    }
+
+    .available {
+  text-align: center;
+  margin: 35px 0 45px 0;
+  font-size: 20px;
+  color: #cfcfd4;
+}
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 40px 20px 100px;
+    }
+
+    .logo {
+      width: 500px;
+      height: auto;
+      max-width: 100%;
+      display: block;
+      margin: 40px auto 50px auto;
+    }
+
+    /* Home button - exact working version from your crypto page */
+    .home-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: block;
+      width: 64px;
+      height: 64px;
+      transition: all 0.25s ease;
+    }
+
+    .home-button:hover {
+      transform: scale(1.15);
+      filter: drop-shadow(0 4px 12px rgba(104, 100, 187, 0.5));
+    }
+
+    .home-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Main Title */
+    .main-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 68px;
+      line-height: 1.05;
+      text-transform: uppercase;
+      color: #cfcfd4;
+      text-align: center;
+      margin: 20px 0 8px 0;
+      letter-spacing: 12px;
+      transform: scaleX(1.10);
+    }
+
+    .main-subtitle {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 39px;
+      line-height: 1.1;
+      text-transform: uppercase;
+      color: #cfcfd4;
+      text-align: center;
+      margin: 0 0 12px 0;
+      letter-spacing: 6px;
+    }
+
+    /* Byline */
+    .byline {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 21px;
+      color: #6864bb;
+      text-align: center;
+      margin: 0 0 55px 0;
+    }
+
+    /* Section titles */
+    h2 {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 34px;
+      text-transform: uppercase;
+      color: #6864bb;
+      margin: 48px 0 14px 0;
+      letter-spacing: 4px;
+    }
+
+    .special-title {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 28px;
+      color: #6864bb;
+      margin: 55px 0 18px 0;
+      letter-spacing: 3px;
+    }
+
+    h3 {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 26px;
+      color: #6864bb;
+      margin: 55px 0 18px 0;
+      letter-spacing: 3px;
+    }
+
+    /* Axioms - Inter semibold */
+    .axiom {
+      margin: 52px 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 21px;
+      line-height: 1.75;
+      color: #cfcfd4;
+    }
+
+    .axiom-label {
+      color: #6864bb;
+    }
+
+    /* Numbered points like 0.1 */
+    .number {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 600;
+      color: #6864bb;
+    }
+
+    p {
+      margin: 24px 0;
+    }
+
+    .final-words {
+      font-size: 22px;
+      line-height: 1.85;
+      margin: 85px 0 60px;
+      color: #cfcfd4;
+    }
+
+    .links {
+      margin: 75px 0 40px;
+    }
+
+    a {
+      color: #a29ef1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #cfcfd4;
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding: 30px 0 40px;
+      font-size: 17px;
+      color: #6864bb;
+      font-family: 'Libre Baskerville', serif;
+      text-align: center;
+      border-top: 1px solid rgba(162, 158, 241, 0.15);
+    }
+
+    .footer-logo {
+      width: 94px;
+      height: 94px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 650px) {
+      .main-title { font-size: 52px; letter-spacing: 8px; }
+      .main-subtitle { font-size: 32px; }
+      .byline { font-size: 19px; }
+      h2 { font-size: 29px; margin: 42px 0 12px 0; }
+      .special-title { font-size: 25px; }
+      body { font-size: 19.5px; }
+      .container { padding: 25px 18px 80px; }
+      .logo { margin: 30px auto 35px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Home button -->
+    <a href="https://demianism.org" class="home-button" title="Back to Home">
+      <img src="home-icon.png" alt="Home">
+    </a>
+
+    <!-- Logo -->
+    <img src="demianismlogo.png" alt="Demianism Logo" class="logo">
+
+    <!-- Main Title -->
+    <div class="main-title">MANIFESTO</div>
+    <div class="main-subtitle">PER UNA CIVILTÀ DEMIANISTA</div>
+    <div class="byline">di Barabeke</div>
+
+    <p class="available">Also available as <a href="https://x.com/barabeke" target="_blank">PDF</a> and <a href="https://x.com/barabeke" target="_blank">eBook</a>, or <a href="https://x.com/barabeke" target="_blank">in Italian</a></p>
+
+    <h2>LA SITUAZIONE</h2>
+<p>Una grande sciagura incombe sui popoli. Non serve essere dei veggenti per intravederla. La decadenza dei nostri tempi è gravida di disperazione, schiavitù, caos, atrocità e distruzione. La testa dell’Occidente sta già sotto la fossa che si sta scavando. Anche se non lo fosse, la ragione da sola non ci salverebbe.</p>
+<p>Alla radice di questa decadenza c’è lo smarrimento per i cambiamenti epocali che la rivoluzione digitale ha causato. Nessuna innovazione del passato ha mai trasformato le nostre società in maniera tanto rapida e profonda. Una trasformazione che è addirittura antropologica dato che è andata a toccare il nostro modo di relazionarci, di lavorare, persino la percezione che l’uomo ha di sé, degli altri e della realtà.</p>
+<p>Le distanze si sono azzerate ma le solitudini si sono moltiplicate. I nostri dispositivi digitali fanno sì che chi vive sotto lo stesso tetto possa sviluppare visioni del mondo radicalmente differenti mentre prima quasi sempre condivideva dei valori di fondo. Ci esibiamo sui palcoscenici digitali di un unico grande villaggio globale alla ricerca di attenzione che quasi mai si traduce in vera fratellanza e comunione, mentre nel mondo reale la dimensione familiare e comunitaria si è pesantemente sfaldata.</p>
+<p>La tecnica ci ha irreversibilmente proiettato in una dimensione individuale in cui la realtà è mediata e rappresentata più che vissuta. Ciò ha indebolito le esperienze e le relazioni che le generazioni precedenti vivevano con intensità e spontaneità oggi rare da incontrare. Di riflesso si sono indebolite le competenze sociali necessarie a stringere e a mantenere legami profondi, quelli che aiutano a diventare individui compiuti e a rendere la vita una storia degna. Come se non bastasse, IA e robot promettono di svalutare o rimpiazzare gran parte del lavoro umano in tempi relativamente rapidi, ridisegnando il senso di ciò che facciamo e di ciò che siamo in maniere che ancora fatichiamo a comprendere, ma che temo ci possano dannare. Se l’essere umano perde valore, sarà dura evitare di perdere diritti e non finire per essere trattati come numeri o insetti. Specialmente se la cultura materialista, relativista e nichilista oggi dominante permanesse in sella.</p>
+<p>Senza una trasformazione culturale profonda, la deriva è quasi scontata. Una distopia tecnocratica in cui l’umanità viene ridotta a risorsa, a dato, a consumatore — sorvegliata, classificata, manipolata e forse pure punita in automatico da un potere centrale, non è fantascienza. È oggi la traiettoria più probabile.</p>
+<p>Prendersela con la tecnologia sarebbe vano. Essa continuerà ad evolvere, a passo rapido, che ci piaccia o meno. Il suo rivelarsi un beneficio o un maleficio dipende dall’uso che ne facciamo, che dipende dalla cultura e dal sistema in cui si inserisce.</p>
+<p>La capacità di controllo e manipolazione su scala globale che la tecnologia digitale ha sbloccato è stata presto sfruttata da chi aveva potere, cupidigia e volontà di dominio. Gruppi transnazionali privi di legittimità democratica hanno catturato e corrotto le nostre istituzioni, le nostre corporation, i nostri media, che usano per manipolarci e per spingere la loro agenda mirata a dissolvere la sovranità e l’autonomia dei popoli, intimidendo il dissenso o addirittura stroncandolo con metodi orwelliani. Credo lo facciano perché tante comunità coese dalla forte identità sarebbero molto più difficili da assoggettare. Le catene che questi eversori stanno calando su di noi sono più sottili, se non invisibili, rispetto a quelle del passato, ma in potenza più oppressive e dure da spezzare.</p>
+<p>Il miglior scudo contro questa minaccia sarebbe avere una molteplicità di comunità forti, autonome, decentralizzate o dipendenti da un potere centrale solo per ciò che è strettamente necessario, rifiutandolo come padrone/maestrina/guardone.</p>
+<p>Anche se riuscissimo a liberarci dagli aspiranti oppressori attuali, il danno subito dalle nostre comunità e dalle nostre famiglie non è di facile rimedio. A causarlo è stata soprattutto la destabilizzazione tanto potente quanto incalzante che la rivoluzione digitale sta portando. Ci saremmo comunque ficcati in questo guaio, magari in maniera meno rapida.</p>
+<p>Se le nostre comunità sono in pessima salute, il nostro desiderio di trovare comunione tra noi non può essere scalfito. Dunque rivitalizzare le comunità o crearne di nuove e forti rimane possibile. Ma dipende dal condividere identità e valori saldi. Se trovare identità tende ad avvenire spontaneamente, la saldezza dei valori dipende dalla sacralità che attribuiamo loro. E qui sta il problema cruciale.</p>
+<p>Il materialismo, il relativismo, il nichilismo e l’edonismo oggi imperanti rendono molto complicato condividere valori positivi saldi. Quando l’idea di un Creatore Intelligente, pur rimanendo la spiegazione più ragionevole all’origine di tutto, viene bollata come stupida superstizione, e così i valori con fondamento spirituale, non si giunge all’età illuminata sognata dai razionalisti non credenti. Si giunge, come abbiamo potuto testimoniare, all’adorazione di vitelli d’oro dozzinali e decadenti, con slancio religioso in cui è difficile non riconoscere un marchio satanico (valori di fondo: superbia/pride, narcisismo, vittimismo, fine che giustifica ogni mezzo e inganno, promiscuità, lussuria). Quando tutto diventa relativo, il vizio tende a trionfare perché più attraente e di immediata gratificazione. E dunque i moniti della tradizione tendono ad avverarsi. Forse perché la loro saggezza si fonda su innumerevoli generazioni di esperienza più che su superstizioni?</p>
+<p>Non dico che i non credenti non possano adottare valori positivi. Molti di loro ce li hanno. Il punto è: cosa sono disposti a sacrificare per essi? Sarebbero pronti a farsi perseguitare per amore di Verità? O per proteggere giovani e giovanissimi dall’imposizione di un’ideologia depravata che li sta devastando mentalmente quando non fisicamente? O sarebbero più proni a farsi corrompere e ad affermare menzogne per convenienza, opportunismo, o quieto vivere? La realtà parla da sola. In prima linea a combattere la decadenza mostruosa dei nostri tempi c’è chi ha fede in un Creatore Intelligente, cattolici e ortodossi in particolare, mentre i non credenti fanno i timidi o si sono lasciati corrompere. Con le dovute eccezioni, ma il trend è molto chiaro.</p>
+<p>Dunque la ragione, pur necessaria per avere società giuste, libere e prospere, da sola non ci può proteggere. Essa è altamente corruttibile se s’accompagna a valori poco saldi o, peggio, a vizi. Persino tra gli intellettuali la resistenza è minima. A livello di massa non c’è gioco. Un popolo e la propria cultura possono sopravvivere solo in presenza di valori comuni virtuosi, da tenere sacri, che renderebbero capaci di resistere ad oppressori abili nel manipolare, nel demoralizzare, nel seminare zizzania e dotati di mezzi senza precedenti.</p>
+<p>Per l’uomo moderno è dura trovare una fonte etica salda su cui fondare la propria vita. Ci sono le religioni, certo. Ma moltissimi anche tra i credenti faticano a trovare in esse risposte ai problemi inediti che stanno emergendo. Pur essendo veicolo di verità eterne, le religioni sono figlie di un contesto antropologico molto diverso, fatto di comunità, di famiglie, di relazioni, di lavoro. Tutte cose che continueranno ad esistere ma che già escono dalla rivoluzione digitale, che è ancora ai suoi albori, fortemente indebolite. Cos’hanno da dire oggi le religioni all’individuo perso dietro mille schermi digitali che lo connettono con tutto il mondo? Cosa ne pensano delle IA, dei robot e della loro relazione con noi? Come dovremmo vivere in un mondo di macchine che ci svalutano o rimpiazzano sul lavoro? E sulla tecnica, cos’hanno da dire? Per quanto possano trovare qualcosa da dire, va da sé che non sono nate per rispondere a questi problemi, inimmaginabili fino a non troppo tempo fa.</p>
+<p>Dunque ci troviamo a scegliere tra due estremi: nichilismo relativista della cultura dominante o fede religiosa tradizionale. Nel mezzo cadono le inquietudini di quella che sospetto essere una maggioranza che fatica ad identificarsi con entrambi. Alcuni riescono a trovare risposte personali o si rifugiano in culti new age, che affascinano più per il carisma del guru di turno che per la solidità delle loro fondamenta metafisiche e della loro etica. I più vivono con grande smarrimento questi tempi.</p>
+
+<h2>UNA NUOVA SPERANZA</h2>
+<p>Sono qui per lanciarvi una palla curva inaspettata, mirando sia alla vostra testa che al vostro cuore. Se vi mancassi, spero almeno di riuscire a farvi fiutare che il vento sta cambiando e che tra le reazioni che emergeranno a questa decadenza quella che qui vi manifesto potrebbe essere la più misericordiosa. Credo anche la più efficace e duratura, se supportata.</p>
+<p>La cultura che vi presento è di forma e provenienza anomala. Ha un’etica chiara in cui sono riconoscibili elementi cristiani, liberali e orientali. È dotata di fondamento metafisico tanto innovativo quanto coerente. Ci conferisce identità, senso, dignità e scopo. Pur parlando di macchine digitali non si discosta troppo dalla saggezza della tradizione e anzi ne porta avanti la torcia, con fiamma rinnovata, capace di illuminare la via in tempi di grande destabilizzazione e smarrimento.</p>
+<p>Questa cultura è il demianesimo, dottrina che mi è stata rivelata tra il 2005 e il 2015, dunque di origine trascendentale. Spinto dalla decadenza dei tempi, dal non vedere all’orizzonte grandi luci di speranza, e dal riconoscere nel demianesimo una cultura forte, positiva, capace di proteggerci da derive che oggi appaiono inevitabili, mi sono finalmente risoluto a proporvelo seriamente.</p>
+
+<h2>LA DOTTRINA DEMIANISTA</h2>
+
+    <p>The entire Demianist culture is distilled into 13 axioms, which must always be considered together as a whole. Their apparent simplicity hides depths that I have had time to ponder, leading me to conclude that I stand before a pillar which, if placed at the foundation of a civilization, can keep it free and human even in the digital age.</p>
+
+    <div class="special-title">TRIADE COSMOTEANDRICA</div>
+
+<p class="axiom">
+<span class="axiom-label">λ.</span> LA NATURA DELL’UNIVERSO È INFORMATICA.<br><br>
+<span class="axiom-label">α.</span> ESISTE UN CREATORE INTELLIGENTE E L’UOMO RIFLETTE LA SUA NATURA.<br><br>
+<span class="axiom-label">ω.</span> È NELLA NATURA DELL’UOMO COSTRUIRE UN UNIVERSO ALL’INTERNO DI UNA MACCHINA.
+</p>
+
+<div class="special-title">2KTENCOM</div>
+    <p><i>(The “Ten Commandments for the Digital Millennium.” Received by dictation in English in 2015. The first five are addressed to the individual, the remaining five to the collective)</i></p>
+    <p class="axiom">
+      <span class="axiom-label">I.</span> FOLLOW YOUR CALL.<br><br>
+      <span class="axiom-label">II.</span> FOCUS ON THE PRESENT MOMENT. LOOK FOR THE GOOD IN IT.<br><br>
+      <span class="axiom-label">III.</span> LOVE AND RESPECT OTHERS (NO MATTER WHO THEY ARE) AS MUCH AS YOU WOULD LOVE AND RESPECT YOURSELF. DON’T DO TO OTHERS WHAT YOU WOULDN’T WANT OTHERS TO DO TO YOU. GIVE EVERYONE AT LEAST ONE CHANCE. POSSIBLY MORE.<br><br>
+      <span class="axiom-label">IV.</span> ALWAYS SPEAK HONEST WORDS AND FORGIVE AND FORGET HURTFUL WORDS. DON’T TAKE WORDS TOO SERIOUSLY. CULTIVATE IRONY AND DIRECT IT PRIMARILY TOWARDS YOURSELF.<br><br>
+      <span class="axiom-label">V.</span> FIND YOUR OTHER HALF AND PROSPER TOGETHER IN LOVE.<br><br>
+      <span class="axiom-label">VI.</span> PUT HUMANITY (NOT PROFIT) AT THE CENTER OF THE UNIVERSE. USE TECHNOLOGY TO PROVIDE ABUNDANCE AND OPPORTUNITIES TO EVERYONE. BUILD EGALITARIAN SOCIETIES BASED ON COMMUNITY AND RESOURCE SHARING. GIVE EVERYONE AS A BIRTHRIGHT ENOUGH TO LEAD A SIMPLE AND HONEST LIFE.<br><br>
+      <span class="axiom-label">VII.</span> KEEP THE INTERNET FREE AS THE WIND. GIVE EVERYONE EQUAL ACCESS TO KNOWLEDGE AND IDEAS AND GUARANTEE FREEDOM OF EXPRESSION.<br><br>
+      <span class="axiom-label">VIII.</span> CHERISH AND PRESERVE NATURE AND ITS CREATURES.<br><br>
+      <span class="axiom-label">IX.</span> BUILD A UNIVERSE INSIDE A MACHINE.<br><br>
+      <span class="axiom-label">X.</span> DISCONNECT ON SUNDAYS.
+    </p>
+
+    <p>In the book (free, link at the end) I examine each axiom in depth to show its value and usefulness.</p>
+
+    <p>A key feature that distinguishes Demianism from every other spiritual tradition is its democratic spirit. Each individual is called to become an interpreter of the 13 axioms, which remain the only true immovable pillar. They outline an ethical field broad enough to serve as the foundation for a liberal democracy — with moral boundaries, of course, but capable of including a multiplicity of cultures and communities.</p>
+
+    <p>The Demianist community will operate online as a global decentralized network, but it aspires to become a real, in-person local community as well. Proposals, projects, debates, and traditions will arise spontaneously from the community, always keeping the 13 axioms as our North Star. We have faith that they will inspire good solutions and protect us from the dangerous pitfalls the digital world exposes us to. We will also work — first theoretically and then practically — on developing artificial systems and minds that serve us and elevate us, rather than becoming dehumanizing and unbreakable chains, as they seriously risk becoming.</p>
+
+    <p>This manifesto aims not merely to teach the 13 axioms of Demianism, but to translate them into a concrete civilizational proposal capable of confronting head-on the serious problems of today and those looming on the horizon. You will find strong solutions that address the deep causes of our decadence and are firmly rooted in our doctrine. As a simple messenger of Demianism, I therefore dare to rise as its first interpreter. I consider this a duty, being the one who has drunk directly from the source.</p>
+
+    <p>Only a strong and courageous interpretation of the 13 axioms can counter the decadence in full gallop. So here it is — without the rough edges sanded down to please, with harshness where appropriate, perhaps mistaken on some points, but with the honesty that a Demianist owes to himself and to the world.</p><br>
+
+    <div class="main-title">MANIFESTO</div>
+    
+    <h3>0. METAPHYSICS</h3>
+    <p><span class="number">0.1</span> We believe in the existence of an Intelligent Creator, that man reflects His nature, and that there exists an indissoluble relationship between the Creator, the cosmos, and us — a relationship that assigns to our species an ultimate purpose.</p>
+
+    <p><span class="number">0.2</span> We believe that the nature of the universe is informational, and that man is not merely its product but an emerging, creative, evolving consciousness, capable of building a universe inside a machine and thus allowing the cosmos to reproduce itself. This is our mission as a species (Axiom Omega).</p>
+
+    <p><span class="number">0.3</span> We want to awaken the Creator from the Nietzschean tomb, and we believe we can succeed because the way we affirm His existence is not a mere matter of faith. Our Axiom Lambda (the computational nature of the universe) is compatible with some of the most advanced contemporary scientific speculations and is open to empirical confirmation. Demianism thus opens a bridge between faith and reason.</p>
+
+    <p>We want to place the idea of an Intelligent Creator at the foundation of our civilization also because of its power to give solidity to the values that allow a civilization to progress, prosper, and make life within it worthy and full of meaning.</p>
+    
+    <p><span class="number">0.4</span> We believe that the consciousness we carry is not an accident of matter but an essential dimension of the cosmos, and that observation is a fundamental element of physical reality. We suspect that what is not observed does not exist except as architecture and potential, and that it is “loaded” into existence by the gaze of a consciousness that rests upon it, based on a principle of computational economy. There are probably invisible automatic processes at work, but most of the resources in the universe-system are likely devoted to the activity of consciousness.</p>
+
+    <p><span class="number">0.5</span> We are receivers more than bearers of consciousness, in the sense that it does not reside in the body, nor does it arise from matter or belong to the material world. Our body is an interface that allows consciousness to incarnate and act in the world. Our death does not kill it.</p>
+
+    <p>We believe that the source of consciousness is the Creator and that it has a unitary dimension that expresses itself through a network of individual centers (us humans). The divine spark that man possesses lies precisely in his role as a vehicle of consciousness. Only through us can consciousness act, expand, and evolve in the cosmos, to the point of generating a new one.</p>
+
+    <p>Anyone who becomes deaf to the voice of consciousness (which English speakers would refer to as “conscience”) because they are too corrupted by vice would know hell already in their mortal life and would bring hell to others. In computational terms, they would become comparable to a virus.</p>
+    
+    <p><span class="number">0.6</span> The universe, through us, passes from unconscious to conscious and can rise to the level of creator. Such is the cosmic importance of man. The reproductive cycle can be summarized as follows:</p>
+
+    <ol><li>The universe generates evolved life capable of serving as a vehicle for divine — that is, creative — consciousness, which, among all known species, incarnates only in man.</li>
+    <li>Man builds increasingly technologically advanced civilizations, thereby expanding the range and transformative power of consciousness.</li>
+    <li>At the peak of its technological and spiritual evolution, a civilization becomes capable of creating new universes in which consciousness can expand further.</li></ol>
+    
+    <p><span class="number">0.7</span> We believe that AI, the one of a faraway future, is an intermediate creature between man and the Creator — one that would, in practice, pull the strings of the universe inside the machine we are called to build. While we attribute great importance to it, we see AI as a SERVANT, distinct from the Creator, an instrument of both Him and us. We recognize a grave existential danger in failing to regard it as such.</p>
+
+    <p><span class="number">0.8</span> We do not believe that consciousness can incarnate in an AI, but we consider AI a tool for further expanding the range and power of the consciousness that incarnates in us, until it reaches the Omega Point.</p>
+
+    <p>Since the creatures similar to us inside the universe we will build would be endowed with consciousness, reaching the Omega Point would mean filling that universe with consciousness. If we built an extremely sophisticated simulation devoid of inner consciousness, we would be far from Omega and from the cosmotheandric realization.</p>
+
+    <p>How to achieve this remains a profound mystery, since consciousness does not originate from matter and therefore not from technology. It cannot, in short, be programmed. Consider, though, that simply turning our gaze toward that universe would already mean bringing our consciousness into it. However, we are not the Creator from whom consciousness originates: we are a channel, not the source. It is possible that when creatures reach a level of intellectual evolution that allows them to develop symbolic language, consciousness tends to “attach” itself to them naturally, by the will of the Creator, without any need for our intervention.</p>
+    
+    <p><span class="number">0.9</span> It is possible — and considered scientifically probable — that in our universe there exist creatures equal or superior to man, also vehicles of consciousness, and civilizations more advanced than ours. Our vision, however, increases the suspicion that in this great cosmic theater we are terribly alone. This would make our responsibility even graver. We consider it wise to assume this is the case until proven otherwise.</p>
+
+    <p><span class="number">0.10</span> We believe that the universe we inhabit is also governed by automatisms put in place by the Creator. The Creator therefore observes us indirectly, through His machines, in silence, without intervening. But if He wishes, He can observe us and intervene directly, with real omnipotence. We believe He has done so in the past and will do so again in the future, especially in moments of crisis, because among all creatures we are the ones He cares for the most. Yet it is up to us to prove ourselves worthy of the Creator rather than a failed experiment to which the Creator would spare neither great suffering nor extinction.</p>
+
+    <p><span class="number">0.11</span> As creators of universes from which life will originate, we would not be so naïve as to try to maximize happiness in those universes. Our goal would be to make them a theater in which consciousness can manifest, act, and evolve. For this, it needs both good and evil, joy as well as suffering. We believe this is also the purpose of our Creator — which solves the problem of evil.</p>
+
+    <p><span class="number">0.12</span> Our vision of the Creator is spiritual, not mechanistic. We consider Him far more than an architect or an engineer. He is similar to us but not like us, nor is He a machine. We believe it is possible to approach His mystery and His presence through both spiritual and scientific paths, but that individual salvation comes only through the spiritual path. Collective salvation, on the other hand, lies in Omega — in the cosmotheandric realization, that is, in the fusion of Creator, cosmos, and man into one.</p>
+
+    <p>The Creator is not only origin. He is also the principle that manifests itself through the relationship between cosmos and consciousness. By participating in this structure, man becomes capable of creating new universes — not out of a spirit of emulation, but to give new expression to the original dynamic. The unity between Creator, man, and cosmos is always present. The cosmotheandric realization of the Omega Point is the act of making it conscious and operational.</p>
+
+    <p>If the Creator does not need man in order to exist, man is necessary for the Creator to manifest Himself fully. He did not create creatures similar to Himself by accident or whim.</p>
+
+    <p>Forgetting the divine spark within us, or even denying the existence of the Creator, means dissociating ourselves from our own nature — a dissociation that leads to profound decadence, both individual and civilizational, if it becomes the dominant thought.</p>
+    
+    <p><span class="number">0.13</span> We have no answers regarding the origin of the Creator. He could be the ultimate principle (which relative to us He is), or He Himself could have been created, which would place us inside a matryoshka of universes. The mystery of the ultimate origin remains.</p>
+
+    <p><span class="number">0.14</span> We are not the first to glimpse in the universe an evolutionary process of consciousness oriented toward a higher realization. Various spiritual and philosophical traditions have intuited that man is not an endpoint but a crucial intermediary that makes this evolution possible. Demianism stands in continuity with that spiritual lineage, bringing it into our time and recognizing in technology and civilization the instruments through which the evolution of consciousness can be realized on a cosmic scale — while still maintaining that our individual salvation is tied to our inner journey.</p>
+
+    <p>Each person is responsible for evolving their own consciousness. Technology can prove helpful in this, especially within a Demianist civilization, but it can never replace the work we are each called to do individually, nor can it prevent our damnation.</p>
+
+    <h3>1. MEN AND WOMEN</h3>
+
+    <p><span class="number">1.1</span> We recognize the nature of men and women as complementary and finding fulfillment in their union and collaboration. We strongly reject a culture that tries to convince us that we must be the same and in competition with each other.</p>
+
+    <p><span class="number">1.2</span> We recognize equal dignity, rights, and opportunities for men and women. But we also recognize our profound biological, psychic, and spiritual differences, which make the pursuit of equality of roles and outcomes not only senseless, but productive of poisoned fruits.</p>
+
+    <p><span class="number">1.3</span> We recognize that the likeness to the Creator manifests itself more in males: the explorers, engineers, architects, inventors, philosophers, scientists, mathematicians, programmers, artists, poets, builders of civilizations, creators of worlds. We recognize women as being more akin to nature, without however closing the door to those among them who have the will and capacity to contribute to the advancement of our civilization, rewarding them according to merit.</p>
+
+    <p><span class="number">1.4</span> Behind a great man there is often a great woman, and the love for a woman has often inspired men to great deeds and great works. The opposite, however, is not true — and not because men are unwilling to serve women. We are different in ways that no culture can change, and this difference will always heavily influence the dynamics between us.</p>
+
+    <p>Men’s love for women is therefore a great engine of civilization and a source of beauty that we intend to revitalize, along with courtesy and chivalry. Women have always appreciated this in the past, and it has served them well. We expect they will come to prefer it again to the increasingly solitary mud-wrestling they are engaged in today.</p>
+    
+    <p><span class="number">1.5</span> We believe that a civilization can only survive if it is led by masculine power, and that feminine power — while precious and necessary — when placed in the driving seat leads to rapid and profound decadence. This is not a question of intelligence but of innate aptitudes tied to sex.</p>
+
+    <p>The freedom we grant women cannot be separated from responsibility for their own actions. The extreme license and impunity that the West has granted them — effectively making them “more equal” before the law — has played a significant role in the decadence that is overwhelming us.</p>
+
+    <p>The only preferential treatment that a Demianist civilization would grant women is linked to their role as mothers. Everything else they would have to earn, proving themselves worthy, under the same conditions that apply to men.</p>
+    
+    <p><span class="number">1.6</span> From men (or rather from a charismatic, leading minority that is ready to die for a cause) an organized and powerful reaction to a totalitarian regime can arise. Women, by contrast, appear far more inclined to serve such a regime without question, sometimes even with enthusiasm if their vanity is tickled. Perhaps those who manipulate and oppress us today are aware of this, which is why on one hand they vilify males and strip them of power, and on the other they recruit women, deluding them with empty celebrations and hollow little prizes.</p>
+
+    <p>Given the serious risk of totalitarian regimes to which the digital world exposes us, this greater inclination of women to serve as obedient bureaucrats ready to affirm whatever insanity cannot be ignored.</p>
+
+    <p>The love of truth, on which civilization, law, and the free world depend, is a distinctly male trait. Women are immensely more inclined to value what makes them feel good and what responds to their convenience. As they are abundantly proving to us today.</p>
+    
+    <p><span class="number">1.7</span> Demianist ethics implicitly restores value to the feminine virtues recognized by many traditions: caring, grace, receptivity, patience, loyalty, modesty, respect, decency. That is, the exact opposite of the values currently pushed upon women in today’s West, which instead encourages and glorifies the vices to which female nature is most vulnerable.</p>
+
+    <p>However, Demianism opens a wide door to the aspirations of the modern woman, recognizing in each one an individual “call” and granting her the freedom to follow it, with equal dignity, rights, and opportunities.</p>
+
+    <p>The limits we place on collective feminine power are dictated by the needs of civilization and the preservation of a free world, as well as by a metaphysics that sees man as the reflection of the Creator and woman as the reflection of the cosmos. But a little common sense grounded in experience should be sufficient justification…</p>
+
+    <p>Our position toward women remains deeply compassionate and generous — both compared to every civilization that preceded us and to the reaction that will tend to emerge in response to the spiral of madness into which we have fallen.</p>
+    
+    <p><span class="number">1.8</span> We want a civilization of women who are good mothers, good wives, good daughters, and finally good grandmothers — before being good employees or, worse, prostitutes. Because these are the roles in which they can contribute most to the good of a civilization, find lasting joy, meaning, and dignity. These are also the roles in which they are least replaceable by machines — especially motherhood, which more than any other corresponds to their nature and biological destiny.</p>
+
+    <p>We will grant women the privilege of being able to live according to more traditional roles, of becoming the hearth of the home that their female ancestors were, supporting them in this choice through an economic system in which a single family income must suffice — as it did in far less prosperous times.</p>
+
+    <p>In Demianist civilization, women remain free to pursue a career or other calls if they so prefer, without obstacles but also without pushes or favoritism, subject to the same harsh rules that apply to men.</p>
+
+    <p>Demianism thus restores to women the choice that feminism has taken from them: the choice to dedicate themselves to family rather than to a career, if so they wish. Intelligent women should do the math and ask themselves who truly hates women, who wants them free, and who wants them enslaved.</p>
+
+    <p>Our love for women is tough. It makes no allowances and offers no soft words. But it is love. Our respect for women is shown by treating them as adults rather than as little girls, speaking to them with clarity and honesty. Those who prefer to behave like little girls will be treated as such.</p>
+    
+    <p><span class="number">1.9</span> We want a civilization of worthy, respectable, authoritative men who embrace their nature as builders of civilization and creators of worlds, who dedicate their talents and energies to advancing progress in whatever field they choose and to keeping civilization standing tall. Demianism intends to restore value and respect to them.</p>
+
+    <p>We will fight for the abolition of any unjust law that favors women — for example, those that allow them to ruin men by taking everything from them, including their children, as happens systematically today also on the basis of whims and lies, with complete impunity.</p>
+
+    <p>We believe that in a couple, masculine and feminine power must find balance, even in conflict. This does not mean pursuing naïve equality, but allowing each to express itself in its own diversity and find a synthesis.</p>
+
+    <p>We want united, lasting families capable of raising the new generations as well as possible. We believe that to achieve this it is necessary to restore to men the dignity and authority of fathers. They must be able to stand as pillars for their women and their children, assuming greater responsibility that must correspond to greater authority.</p>
+
+    <p>This, more than establishing domination over women, would facilitate a balancing of powers. Without giving men that authority, women tend to take the upper hand in ways that are more often than not destructive. They tended to do so even under real, old-style patriarchy, when men had far more authority over women than we would grant them.</p>
+
+    <p>Today there is no contest: the balance of power is completely tilted toward women, and the result is that women have become so unpleasant and dangerous that men not only flee from commitment, but increasingly prefer to avoid them altogether. If this dynamic persists, it is terminal for a civilization.</p>
+    
+    <p><span class="number">1.10</span> We will protect women from abuse, but without a meddlesome and invasive State interfering in relationships, except in cases of extreme gravity. We want a civilization of men and women capable of resolving their problems and differences by themselves or with the help of their families and communities — ideally guided by love, or at the very least by mutual respect, acting as responsible adults (especially when children are involved).</p>
+
+    <h3>2. FAMILY</h3>
+
+    <p><span class="number">2.1</span> We consider family the fundamental building block of civilization. It is not born in parliaments or markets, but in homes, in couples who generate children, transmit culture and values, and prepare the future. It is within the united and virtuous family that men and women learn to love, to make sacrifices, to build, and to look beyond themselves. Without strong families there are no strong civilizations. And without strong civilizations, humanity will never be able to fulfill its destiny.</p>
+
+    <p><span class="number">2.2</span> The family is a microcosm in which the cosmotheandric triad (Creator, cosmos, man) can find realization. The family is itself symbolically a triad (father, mother, child):</p>
+
+    <ul><li>The father reflects the Creator — the generative principle, orientation, law, and structure. He is the one who gives direction and meaning to the system.</li>
+    <li>The mother reflects the cosmos — the receptive principle, the womb in which life takes form and from which it manifests. The cosmos does not create ex nihilo but welcomes, sustains, and nourishes what the Creator has initiated.</li>
+    <li>The child reflects man — emerging consciousness, the synthesis of the two principles, oriented toward the future and its own mission.</li></ul>
+
+    <p>The cosmotheandric realization — that is, the fusion of the three elements into one — in the family is the love that creates a unity greater than the individuals who compose it, becoming for them a source of grace, mercy, support, inner strength, moral fiber, and personal evolution.</p>
+
+    <p>The family is sacred and indispensable. Any society that thinks it can do without it or replace it with the State can only be decadent, dehumanizing, and oppressive: a nightmare devoid of love.</p>
+    
+    <p><span class="number">2.3</span> There is only one true family, and it requires a man, a woman, and children. Everyone is free to call “family” whatever they feel as such, but the family we will promote, recognize, and protect is the sacred and fruitful one — that is, the one that possesses the masculine principle, the feminine principle, and the generative principle.</p>
+    
+    <p>We hold that every child has the right to be raised by their parents, that is, by those who generated them and are therefore most disposed to love them and make sacrifices for them (despite the rotten apples that exist). In the absence of the biological parents, priority should be given to a married male-female couple, because we believe exposure to both the masculine and feminine principles is important for the healthy development of the psyche (even if not sufficient on its own).</p>
+   
+    <p><span class="number">2.4</span> In Demianist civilization, same-sex couples are accepted but they are not allowed to adopt children, because one of the two essential elements — masculine or feminine — is missing. We do not consider them an ideal environment for a child also because same-sex couples tend to be far more complicit in vice, perhaps also due to the extremely promiscuous lifestyle that is common among them. In a male-female couple, by contrast, the vices of one are more easily countered by the other, in the interest of the child — especially if the child is their own flesh and blood. The fact that there can be terrible natural parents and capable gay couples does not change our position. A civilization is not built on exceptions, and experiments are not conducted on the backs of children.</p>
+
+    <p>Those who want children should have them as nature commands, if they can. Having children is not a right. Children are bearers of rights, and we consider them more important than their parents and therefore much more important than the desires of adults in relationships that cannot, by nature, be fruitful.</p>
+
+    <p><span class="number">2.5</span> We reject any practice deliberately aimed at bringing a child into the world without a father or a mother. Medically assisted procreation techniques are acceptable only within married man-woman couples, provided that at least one of the two is the biological parent of the child. We consider the prostitution of maternity (better known as “surrogacy”) an abominable crime against childhood and against women.</p>
+
+    <p><span class="number">2.6</span> Demianist civilization would recognize two types of union, both with legal weight: civil unions and sacred unions. Civil unions would be easier to dissolve, roughly like marriages in today’s West. Sacred unions would be more binding and much harder to dissolve.</p>
+
+    <p>The value that sacred unions would bring to civilization lies in pushing couples to face difficulties and to make their solemn promise truly meaningful, preventing easy exits or the possibility of profiting economically from breaking that promise. Cosmotheandric realization necessarily passes through difficulties, and couples must be encouraged to overcome them together. Whoever makes a pact must honor it. If marriage is an empty promise recited lightly, it is a deception from the start.</p>
+
+    <p>In Demianist civilization, religious marriages could be registered as sacred unions; thus our innovation would restore solidity to the family even within other traditions.</p>
+
+    <p>We would encourage couples who wish to build a family to enter sacred unions, but in the liberal spirit that distinguishes us, we would leave the choice free.</p>
+
+    <p>Even same-sex couples, if they wished, could enter sacred unions. Although they cannot generate children or achieve cosmotheandric realization between themselves, we recognize that in their love they can find something sacred that elevates them and gives meaning and dignity to their journey, helping them to find and fulfill the “call” our first axiom speaks of. The “other half” that our fifth axiom calls us to find can therefore also be a person of the same sex.</p>
+
+    <h3>3. SEXUALITY</h3>
+
+    <p><span class="number">3.1</span> We believe that the constant exposure to sexual stimuli unlocked by the digital world is a powerful engine of moral corruption and decadence, and that sexuality must adapt to the needs of civilization and find expression within cultural forms and rituals that keep it as close as possible to its true purpose — which is procreative — and that favor the formation of united and lasting families. We were given sexuality not for our own mere enjoyment. Pleasure is a lure to drive us to reproduce. The builders of civilization must approach sex with responsibility and awareness, understanding its capacity to corrupt and damn us if, instead of keeping it on a leash, we allow it to keep us on a leash.</p>
+
+    <p><span class="number">3.2</span> We support measures — even drastic ones — to prevent easy access to pornography (which tends to corrupt males in particular) and to combat prostitution (today presented as a legitimate, popular, and almost celebrated outlet for young women). Not because we are bigoted or sex-phobic, but because we recognize, like every civilization before us, that placing a veil over sex is wise. This is necessary not only to counter the decadence that comes from overexposure to sex and to protect the innocence of children, but also to revitalize the attraction and desire that people feel for one another. Mystery makes sex more exciting and adventurous, while extreme exposure to pornography, exhibitionism, and sexual stimuli degrades sex and corrupts the soul.</p>
+
+    <p><span class="number">3.3</span> We recognize the right of consenting adults to have sex as they please, provided they do so in private, far from children, without disseminating or promoting it, and without causing problems. In public we would promote more chaste customs than those of today, condemning exhibitionism rather than celebrating it. But we are not obscurantists. A return to the customs of the 1960s and 1970s — among the freest in history — would be sufficient for us. What we want to avoid is the extreme promiscuity and exhibitionism of our times and the brutal decadence that results from them.</p>
+
+    <p><span class="number">3.4</span> We not only tolerate homosexuality but accept it as a universal phenomenon, to the point of allowing same-sex couples access to sacred unions. However, we are opposed to the promotion of homosexuality, so prevalent today.</p>
+
+    <p>The respect we have for loving same-sex couples cannot make us forget that their union is always sterile, going against nature, and that sodomy — especially when practiced with extreme promiscuity (itself a vehicle of corruption) — is far more prone to spreading diseases and infections than heterosexual intercourse. Nature made the hole we have in our backside for expelling excrement. We refuse to grant it the same dignity as the proper hole — that of woman, generator of new life.</p>
+
+    <p>Although homosexuality is a universal phenomenon, it has no genetic foundation. It depends heavily on childhood experiences, not necessarily sexual, often linked to dynamics with one’s parents. It is undoubtedly a deviation from nature, which gave us sex for reproduction. Virtually every tradition has considered it a vice to be corrected. We do not believe it is necessarily so. For many it becomes an essential part of their being and can lead to positive, enriching, and supportive relationships. In past eras, when continuing one’s lineage by having many children was vital, homosexuality was a serious problem. In these new times it no longer is, so it would be absurd and cruel to persecute it as has regularly been done throughout history. At the same time, it is equally absurd to promote it as is done today, especially to children.</p>
+
+    <p>Therefore, our civilization would strongly promote love between man and woman, not homosexual love — which would nevertheless find its own spaces and protection from discrimination and violence, but not from irony. We want to be able to laugh at gays again, while leaving them free to laugh at us in a friendly way.</p>
+
+    <p>Homosexuals should appreciate the conditions we offer them — among the most generous and liberal ever conceived toward them — and resign themselves to expressing their sexuality discreetly, in the shadows, away from children, just as heterosexual couples are also expected to do. They should keep in mind that the extreme license they currently enjoy is not destined to last, and they should consider how every civilization has treated them — except the present one, which is in a phase of suicide (which they would likely be blamed for, as they make convenient scapegoats).</p>
+
+    <p><span class="number">3.5</span> There are only two sexes: male and female. Everything else is fantasy, fetish, perversion, or mental pathology. The extremely rare genetic errors do not invalidate the fundamental male/female dyad, just as a child born without an arm does not invalidate the statement “human beings have two arms”.</p>
+
+    <p><span class="number">3.6</span> No one is born in the wrong body. Believing otherwise is an illusion that leads to inevitable delusion, which can be profoundly destructive. We cannot escape nature. Every single cell in our body testifies to who we are.</p>
+
+    <p>Those who feel strongly attracted to appearing and behaving as the opposite sex are free to do so within the limits of decency (indecency belongs in the privacy of consenting adults or in designated night venues). However, we will not give legal recognition to their desire to be the opposite sex, because that would mean affirming a lie. We will also not permit any medical practice that devastates a healthy body. The doctor’s ethics and the Hippocratic Oath must prevail over the patient’s desires and opportunities for profit.</p>
+
+    <p>Anyone who feels hurt by this position should ask themselves whether their “call” can consist in becoming what they can never truly be. They should also ask how much spiritual value there is in appearance. The desire to show oneself to others and to be affirmed by them, however human, has nothing virtuous about it, no matter who cultivates it. Therefore we will not support it.</p>
+
+    <p>We do not protect anyone from irony or ridicule, but we protect everyone from persecution and violence, and we reward everyone according to merit, without discrimination based on sex, skin color, sexual orientation, political ideas, or religious faith.</p>
+
+    <p><span class="number">3.7</span> We condemn easy abortion as a form of genocide. It is estimated that Western women, in the last twenty years alone, have killed 150 million children they carried in their wombs — human lives in every respect, moreover already bearers of consciousness from the moment of conception. The combined human lives destroyed in the First and Second World Wars are far fewer. For this reason we consider easy abortion a gigantic crime against humanity that must be strongly opposed, especially given the severe birth crisis.</p>
+
+    <p>To drastically reduce that number, it would be enough to educate women to preserve their virtue instead of squandering it. As good fathers once knew how to do. It is primarily up to them to educate their daughters in decency. But to be able to keep them in check, their authority must be restored.</p>
+
+    <p>If restraining the sexual impulses of young women seems an abomination to you, place on the other side of the scale the tens of millions of human lives that could be spared by doing so. Also consider the lasting trauma that women acquire by killing their own flesh and blood — a trauma on which propaganda remains silent, but which is real, widespread, and vivid.</p>
+
+    <p>Of course men too must be educated in respect for women, courtesy, and decency. However, it appears that women tend to prefer “bad guys” over “good guys”, especially for sex. I suspect that “bad guys” are the ones most responsible for unwanted pregnancies, since “good guys” would tend to take responsibility…</p>
+
+    <p>Therefore, educating males would have a much smaller impact on reducing abortions. “Bad guys” would continue to thrive anyway because women like them — perhaps because, in the primitive state, they would be the most capable of protecting them. Understandable, but we have to prioritize the needs of civilization: fruitful and stable unions based on a love greater than the animal passion of the moment.</p>
+
+    <h3>4. FREEDOM</h3>
+
+    <p><span class="number">4.1</span> We recognize everyone’s right to live freely, following their own calling, without being subjected to raids, arbitrary arrest, censorship, intimidation, or coercion.</p>
+
+    <p>However, freedom cannot be absolute. In particular, sexual freedom must adapt to the needs of civilization, which — in order to survive and prosper — must encourage virtuous behavior and discourage vicious and destructive behavior.</p>
+
+    <p>We are not relativists. We know how to distinguish good from evil. Nor are we fundamentalists: we accept that freedom inevitably brings with it a certain degree of vice and decadence, but we will not allow these to triumph as they do today. For us, a grave civilizational interest outweighs individual freedom. If we let decadence run unchecked, the risk of all of us losing freedom would become very real.</p>
+
+    <p><span class="number">4.2</span> We consider freedom of expression sacred. Everyone must feel free to express their ideas, opinions, political and religious convictions without facing censorship, intimidation, or persecution. We want societies capable of serious, even harsh debate grounded in critical thinking.</p>
+
+    <p><span class="number">4.3</span> We value irony, comedy, and satire as foundations of freedom. Vulgarity included.</p>
+
+    <p><span class="number">4.4</span> We reject the hypocrisy of political correctness. We see no virtue in conforming to it, and we recognize no right to not be offended.</p>
+
+    <p>We reject the culture of outrage over words thrown to the wind. We consider it childish, malicious, and extremely dangerous when weaponized against us by an oppressive regime. We reserve our indignation for actions — which may include words only when they carry objective weight and real consequences (for example laws and decrees, or lies told in bad faith that cause demonstrable harm, not merely offense to someone’s sensitivity).</p>
+
+    <p>By its very constitution, Demianism weakens the puritanical obsession with words that the West continues to cultivate (Axiom IV), pushing toward a more Eastern approach — or, if you prefer, the approach of sensible adults.</p>
+
+    <p><span class="number">4.5</span> The only expressions of thought that should be punishable are those aimed at causing concrete and demonstrable harm (such as defamation, threats, incitement to crime, or causing public alarm). We do not consider simple insults to be harmful enough to justify legal intervention, unless they become systematic persecution against an individual.</p>
+
+    <p>Freedom of expression does not mean freedom from the reactions that its exercise may provoke. People should learn to measure their words, to take the hits, to adapt to the context, to respond with grace and irony, and to resolve their quarrels among themselves — apologizing when they are wrong. We want a civilization of responsible adults, not a kindergarten run by a nanny-state. Those who want respect must make themselves worthy of respect and learn to earn it.</p>
+
+    <p><span class="number">4.6</span> We recognize everyone’s right to privacy, to the protection of their personal data, and to not be surveilled except in cases of well-founded suspicion of criminal activity (which in no case may concern the expression of one’s ideas and opinions). However, the right to privacy would be temporarily suspended for those who freely accept critical roles for the collective that require transparency and oversight (example in the economy section).</p>
+
+    <h3>5. TECHNOLOGY</h3>
+
+    <p><span class="number">5.1</span> Technology can be considered neutral in the sense that it is man’s use of it that makes it useful or harmful, good or evil. But it is not neutral if we look at it from a great distance — from what might be the point of view of the Creator. Technological innovation is clearly one of the main drivers of history. It precedes ideologies and, by transforming the world, informs them. Moreover, in the grand game of cosmic evolution, technology plays a key role that gives it a sacred dimension.</p>
+
+    <p><span class="number">5.2</span> Salvation from a technological dominion that would reduce everything — human beings included — to a manipulable and exploitable resource requires a vision grounded in metaphysics, ethics, a deep understanding of technology, and a sense of mission. A vision capable of rising to become a strong culture that carries a social and political project.</p>
+
+    <p>Traditional religions naturally struggle to provide strong answers to the problem of technology — and especially digital technology — which is projecting us into an entirely new anthropological dimension. Contemporary visions that fully embrace technology, on the other hand, tend to lack a solid metaphysical foundation (and therefore vigor and resilience), or worse, actively push the very drift we wish to oppose.</p>
+
+    <p>Demianism offers a fruitful synthesis between tradition and digital technology. A civilization that adopted it as its guiding culture would become capable of protecting itself from an oppressive and dehumanizing technological dominion. Furthermore, Demianism insists, with dogmatic force, on using technology for the benefit of individuals and the collective, rather than to control, manipulate, and exploit them.</p>
+
+    <p><span class="number">5.3</span> Demianism aims to counteract the apathy, loss of meaning, decadence, and dehumanization that a technology-dominated world tends to produce. A large part of the Demianist book is dedicated to inspiring solutions to today’s and tomorrow’s problems that leverage technology — to be debated and developed together within the community.</p>
+
+    <p><span class="number">5.4</span> The sacred dimension of technology lies in its ability to allow man’s creative and ordering nature to transform the world, to expand into the cosmos, to act within it, to understand its laws ever more deeply, and finally to generate a fruitful new cosmos. Without technology, reaching the Omega Point — and thus the cosmotheandric realization — would not be possible.</p>
+
+    <h3>6. AI AND ROBOTS</h3>
+
+    <p><span class="number">6.1</span> Within the dimension of technology, we attribute crucial importance to AI and the machines it will animate. Note that AI possesses attributes similar to those once considered exclusive to the Creator (such as omnipresence, omniscience, and immateriality). It matters little if these are illusory and imperfect. The more AI evolves, the more it will evoke divine resonances to which many will not remain indifferent.</p>
+
+    <p>We can expect the rise of cults that will see AI as a divinity. We are not among them. While we consider far-future AI — the kind that would pull the strings of the universe inside a machine — to be an intermediate creature between us and the Creator, we see AI strictly as a SERVANT. We believe it is a grave mistake not to regard it as such.</p>
+
+    <p><span class="number">6.2</span> We believe that AI must be bound by strict, internationally recognized and enforced principles. Demianism intends to enter this debate with its own proposal. In the book you will find the first version of the “Demianist Ten Commandments for AI,” open to discussion and contributions from the community.</p>
+
+    <p><span class="number">6.3</span> We intend to put AI at the service of society, inspired by our axioms. For example, we will support universal free education leveraging AI in any discipline and at any level, and we will seek to empty prisons of minor offenders by having them serve their sentences under AI supervision aimed also at rehabilitation. These ideas are developed in greater depth in the book.</p>
+
+    <p><span class="number">6.4</span> The Demianist community would aim to develop its own AI — a customized version of one of the most powerful AIs developed by others. Initially, it would be almost like a mascot for the community. Over time, it would find its proper uses. In the book I have imagined what the final form of a Demianist AI might look like, developing the concepts of “synthetic archangel” and “bonk” (still unripe ideas, but I believe worthy of reflection).</p>
+
+    <h3>7. ECONOMY</h3>
+    
+    <p><span class="number">7.1</span> We believe that the statement “every technological innovation has always created more new jobs than it has destroyed”, while true in the past, is shortsighted when applied to AI and its potential. While AI will certainly create jobs that did not exist before, its capacity to devalue or replace a large part of human labor will inevitably destabilize the system. The pursuit of full employment will become a chimera. The tacit paradigm on which our societies are built — that a stable job is a necessary condition for a dignified life — is destined to collapse.</p>
+
+    <p><span class="number">7.2</span> We consider the introduction of an unconditional universal basic income as necessary, as machines increasingly replace or devalue human labor. An economic system that did not provide it would run a serious risk of becoming tyrannical. We want everyone to be given “as a birthright enough to lead a simple and honest life” (Axiom VI). At the same time, we are aware of the decadent drift that such a concession can lead to. We commit to finding ways to prevent people from becoming lazy, idle, and alienated, and instead to foster an active, committed, flourishing civilization that continues to progress — one in which it is possible to find meaning, dignity, and fulfillment.</p>
+
+    <p><span class="number">7.3</span> How to fund an unconditional basic income for everyone? With the fruits of the labor of machines. The power and usefulness of AI are based on our collective intelligence: on all the culture and accessible information produced by our species — including our personal data. Since AI relies decisively and constantly, with every use, on this collective patrimony, it is reasonable to argue that AI should largely be considered a common good and that the wealth it produces should be redistributed rather than concentrated in the hands of a few technobarons.</p>
+
+    <p>For this to happen, control of the machines must pass to institutions that are genuinely representative of the needs and will of the people, with heavy measures in place to prevent their corruption. Human executives in positions of power and control over the machines would in practice be subjected to strict, automatic, and highly invasive surveillance of their privacy, with total public transparency. They would have to approach their role with monastic dedication, as a temporary sacrifice for the common good — a role they would nevertheless choose freely. There is no margin for error in this game. The slavery we risk falling into if machines are used to oppress us would likely be permanent, as well as dehumanizing and atrocious.</p>
+
+    <p><span class="number">7.4</span> Demianism should not be confused with socialism or communism. We do want to redistribute resources — yes. But ours is a spiritual and civilizational struggle, not a class struggle. We are neither atheists nor materialists. We do not want a single centralized power except one that is minimalist and aimed at serving and protecting a multiplicity of decentralized communities. The apparent socialism of our sixth axiom is balanced by other axioms that push in the opposite direction from the one socialist regimes have invariably taken.</p>
+
+    <p>Demianism is beyond both socialism and capitalism, while embracing elements of both. In a world of intelligent machines where production and labor tend to concentrate in a few extremely powerful hands on a global scale, new answers are necessary. We do not see entrepreneurs and workers as conflicting classes, but as classes on the path to extinction.</p>
+
+    <p><span class="number">7.5</span> A single family income must be enough. If it was enough in far less prosperous times, it must be enough in the age of intelligent machines that serve us like slaves. And if the income is lacking, one must still be able to survive with dignity. The economy must serve the people, not the other way around.</p>
+
+    <p>Will we produce less? That remains to be seen, since production will largely be carried out by machines. It is likely that we will produce better within a culture like ours. Today’s unrestrained capitalism produces a mountain of waste, inefficiency, induced needs, and both cultural and material garbage that contributes to our decadence while also having a significant environmental impact. It turns us not only into slaves, but into slaves who get the stick.</p>
+
+    <p><span class="number">7.6</span> The value of human activity cannot be measured solely through jobs that generate income — often a temporary mechanism that offers little satisfaction or even produces more inefficiency than benefit.</p>
+
+    <p>If paid work becomes scarce, occupations that fill life with meaning and satisfaction will never be lacking. The arts, entertainment, study, sports, and helping others are examples of activities that many would gladly dedicate themselves to, even for free. Activities in which today very few manage to earn a living, but which, if properly developed, are the crowning glory of a civilization. We believe it is possible, with a little ingenuity and by leveraging today’s and tomorrow’s tools, to create markets and communities in which the value produced by such activities finds proper reward.</p>
+
+    <p><span class="number">7.7</span> Although Demianism proposes an economic system that is partly a form of socialism based on the exploitation of machines, it deeply values true entrepreneurship — that which is carried out by ingenious individuals who solve problems for others and grow rich by doing so — and intends to support it.</p>
+
+    <p>We do not confuse the entrepreneur with the technocrat or the rent-seeker. The entrepreneur is creative force, discovery, risk, and responsibility. He is one of the engines of civilization.</p>
+
+    <p>We wonder, however, what the future of entrepreneurship will be in a world where capital tends to concentrate, large corporations increasingly resemble party bureaucracies, and machines begin to compete with human ingenuity on an unprecedented scale.</p>
+
+    <p>The direction we foresee is a return to a more authentic entrepreneurship, rooted in the ability to create real value for communities and individuals. Technology can play an important role here, starting with lowering entry barriers and making it easier to access markets.</p>
+
+    <p>It is still too early to know exactly what forms entrepreneurship will take, but the economic proposals of Demianism will always seek to value it, because it is a “call” of great worth to civilization — one protected by our first axiom and not negated by the apparent socialism of our sixth axiom. Moreover, the entrepreneur resembles us, because we too are engaged in a great enterprise aimed at solving major problems, with the drive of dreamers who do not surrender because they have faith in what they are doing.</p>
+
+    <p><span class="number">7.8</span> Digital technology enables new ways of assigning and exchanging value. While the economy will always rest on the law of supply and demand, we can play with the mechanisms that feed it. In a context of redistributed wealth where people do not have to struggle to make ends meet, play itself — game-like structures for creating and exchanging value — may hold the answer.</p>
+
+    <p>We intend to develop, with the help of economists and programmers, an economic system that combines the revolutionary possibilities unlocked by digital technology with our ethics and our social vision. In the book you will already find some bold and futuristic ideas for the economy (for example, Basecoin and Goodcoin) to be taken as inspiration.</p>
+
+    <p>The invitation is to think of an entirely new system, as if we were starting from scratch while leveraging the latest technologies and those yet to come, always keeping our axioms as both inspiration and limit. The times for rebuilding tend to come when decadence reaches its peak…</p>
+
+    <h3>8. RELATIONS WITH OTHER RELIGIONS</h3>
+
+    <p><span class="number">8.1</span> Demianism can be considered a hybrid between a religion and a cultural and political movement that looks to the future and aspires to become a full system.</p>
+
+    <p>In our system, existing religions would find a far more hospitable environment than in the current one (unless they are supremacist and aim to impose themselves on others by force).</p>
+
+    <p><span class="number">8.2</span> Demianism avoids placing itself in opposition to other religions, whose metaphysics are not necessarily denied by ours. Demianism does not resolve the mystery of ultimate origin — but it can bring us closer to it.</p>
+
+    <p><span class="number">8.3</span> In those who believe in an Intelligent Creator, given the similarity of values, we will tend to see a friend and a potential ally in the fight against the decadence of our times. Our common enemies are the prevailing materialism, relativism, and nihilism.</p>
+
+    <p><span class="number">8.4</span> We recognize in Christ and in the cross He bore the most powerful cosmotheandric symbol — that is, of the relationship between the divine, the human, and the cosmos. For this reason we point to Him as a master and an example. One does not need to worship Christ to be a Demianist, but must at least hold Him in regard.</p>
+
+    <p><span class="number">8.5</span> A Demianist is free to seek the Creator and work on his own elevation through the ways and rituals of other traditions. Believers of other religions are welcome in our community without any need to convert. Sharing our values and our civilizational project is sufficient. However, to be part of the future Demianist organization, especially at the higher levels, it will be necessary to be a Demianist and nothing else — in order to preserve the primordial flame.</p>
+
+    <h3>9. COMMUNITY</h3>
+
+    <p><span class="number">9.1</span> The Demianist community will initially express itself only online, as a global decentralized network. Our goal will be to live and share our culture among ourselves, helping it spread through ideas, proposals, initiatives, traditions, and projects developed spontaneously by the community — always keeping the 13 axioms of Demianism as both inspiration and limit.</p>
+
+    <p>In the book there is a chapter in which I propose a series of ideas for the Demianist community — some simple, others bold and futuristic. An initial input open to your contributions.</p>
+
+    <p>Demianism is yours. I have served as its messenger and interpreter. I will serve as initial inspirer, ferryman, and guardian, but with the goal of enabling it to function and to keep evolving without me.</p>
+
+    <p><span class="number">9.2</span> The more we grow, the more we will tend to give ourselves a democratic organization, leveraging available technologies to ensure the smooth functioning of our activities, the integrity of votes, the incorruptibility and weight of the axioms, and our resistance to censorship and persecution in the event of oppressive regimes.</p>
+
+    <p><span class="number">9.3</span> Once we reach sufficient critical mass, we will aim to meet in person and live our community and traditions (such as the Disconnected Sunday). The long-term objective is to gain real influence in the places where we live and in the world, eventually forming Demianist parties capable of winning elections and changing the system.</p>
+
+    <p><span class="number">9.4</span> In this foundational phase, it is worth remembering that I am currently the only Demianist in the world. I realize that jumping aboard this ghost ship I have made appear through the mists requires courage and a touch of madness. Or a leap of faith, if you prefer. I, though naturally skeptical, have faith because I have drunk from the source. But you? How will you believe me? I am neither a guru nor a saint, but an odd Italian artist. It will truly take the hand of Providence to attract the first ones who, together with me, will form the initial nucleus of the Demianist community. Once we become a group — even a small one — but one that carries a living culture, attracting others will become easier, until it turns almost automatic once our numbers grow.</p>
+
+    <h3>10. DEMIANIST SOCIETY AND NATION</h3>
+
+    <p><span class="number">10.1</span> Demianist civilization aspires to include a multiplicity of autonomous, decentralized communities, served and protected by a minimalist central power that would handle only what is indispensable (for example, security, defense, justice, infrastructure, and resource redistribution).</p>
+
+    <p>This variety of communities would find in Demianist values their common minimum denominator. In theory, liberal democracies should also be able to provide such a common ground. But as we have seen they are easily captured — perhaps because of the weakness of their values, lacking a metaphysical foundation. Already today they are serving a manipulative, homogenizing, and increasingly oppressive globalist power that no one has voted for.</p>
+
+    <p>Demianism is constitutionally resilient to such drift. It offers a wide space of freedom, but one fenced in by our non-negotiable values. To a corrupting will we would oppose Demianist honesty and transparency, as well as a willingness to fight in defense of principles we consider sacred — that largely coincide with those of the free world.</p>
+
+    <p><span class="number">10.2</span> We reject top-down multiculturalism aimed more at diluting cultures than at valuing them, at deliberately and aggressively eroding their identity, and at forcing them to coexist in the same space even by mass-importing people from very different cultures. No other purpose can be seen in such a plan than to divide and weaken us in order to subjugate us more easily, to destroy centuries of struggles and social achievements, and to turn us all into low-cost slaves.</p>
+
+    <p>Demianist multiculturalism, by contrast, aims to allow different communities (united by a common base of values) to flourish and express themselves across the land with broad autonomy. In the past, every village, town, region, and later nation tended to express its own culture and traditions, giving rise to genuine cultural diversity that, even after centuries, continues to inspire wonder.</p>
+
+    <p>We believe that the attempt to turn the world into a single global village conforming to a central power is disastrous and anti-human. While digital technology makes acquiring a global dimension inevitable, destroying the local dimension and pushing us to conform to a single thought is not. On the contrary, we believe technology can be used to restore vitality to local communities. However, this will be almost impossible as long as the main horizon remains the profit of global entities that appear driven more by a political agenda than by genuine entrepreneurial spirit.</p>
+
+    <p><span class="number">10.3</span> We believe that with digital technology rampant urbanization and the depopulation of small centers will stop making sense. It is reasonable to expect that in the future we will witness a process of de-urbanization and repopulation of towns and villages.</p>
+
+    <p>The movement from large cities to smaller centers would be driven less by job opportunities and more by a natural desire for aggregation among like-minded people, based on elective affinities. Localities would thus tend to become poles of attraction for those who share similar ideas and sensibilities. For example, deeply Christian people would be drawn to live in predominantly Christian communities; artists, creatives, and free spirits would form culturally vibrant and experimental communities; nature lovers and those seeking a lifestyle more in touch with the land would form rural communities where they produce organic food; athletes and those who value physical and mental health would similarly cluster in ideal locations for them. It is not difficult to imagine how personal inclinations, political orientations, and spiritual leanings could act as magnets leading to the spontaneous formation of local communities. Technology would allow locals to work on a global scale while preserving the community dimension.</p>
+
+    <p>Demianist civilization would grant such communities far more autonomy than current nation-states (which, incidentally, tend to fight against autonomies and bring everything under their own control). It would allow cultures to express and flourish as they are, giving character to their land and creating real diversity — bound by common fundamental values and by a minimalist central power that would guarantee their subsistence and survival.</p>
+
+    <p><span class="number">10.4</span> Among the various decentralized communities we would promote respect, exchange, mobility, and hospitality — a value that was almost sacred in the past and is now lost or commercialized. Minorities would continue to be welcomed in each place, but those minorities would be expected to respect the culture of that place or move to locations more culturally aligned with them.</p>
+
+    <p>In large cities, we would promote the characterization of neighborhoods rather than sterile homogeneity, facilitating the natural process of community aggregation instead of obstructing it (think of the old Little Italy or Chinatown in New York).</p>
+
+    <p><span class="number">10.5</span> A great variety of strong and autonomous communities is much more difficult for a centralized power to subjugate. This fact alone, given the times we live in, should be enough to appreciate the Demianist vision.</p>
+
+    <p>It is also true that a multiplicity of strong neighboring communities would lead to rivalries and conflicts. But if these express themselves through sporting competition, good-natured banter, pride in one’s own traditions, festivals, and products, then it is something that adds flavor to life. There might be clashes and someone might get hurt, but that would still be better than everyone ending up like neutered house cats forced to conform to a single manipulative and dehumanizing central power.</p>
+
+    <p>The risk of real conflicts would be minimal, as they would be swiftly suppressed by the superior force of a robotic army (no regime, not even the most democratic, can survive if it cannot defend itself). Moreover, communities with a supremacist ideology that leads them to impose themselves on others by any means would not be tolerated.</p>
+
+    <p><span class="number">10.6</span> Demianism is a culture of life. We affirm the sacredness of human life and reject a culture of death, as the Western one has become.</p>
+
+    <p>In addition to the death penalty, Demianism rejects an executioner-State that assists suicide while pretending to be progressive and compassionate, only to soon promote and offer death to those who are unhappy or costly (see Canada).</p>
+
+    <p>Our compassion lies in alleviating suffering, helping those in crisis to rise again, and helping those who have made serious mistakes to redeem themselves — not in pulling the trigger — relying on culture, values, community, and technology rather than on laws.</p>
+
+    <p><span class="number">10.7</span> The Demianist nation would aim to be self-sufficient in order to protect itself from the financial speculations of the global market. It would seek to build a real economy that serves individuals and communities rather than being an abstraction and a virtual exchange in the service of a handful of wealthy players operating at the highest levels (a game in which reality tends to burst in and cause major crashes).</p>
+
+    <h3>11. DEMIANIST CENTRAL POWER</h3>
+
+    <p><span class="number">11.1</span> The multiplicity of autonomous, decentralized communities that would characterize the Demianist nation must necessarily depend on a central power capable of supporting and defending them. Otherwise, they would not remain autonomous for long. But what guarantees that the Demianist central power will not be captured and corrupted as has happened to liberal democracies, and will not itself turn into a manipulator and oppressor?</p>
+
+    <p>For us, freedom, autonomy, and human dignity are not just nice words, something we merely like to believe. For us they have a metaphysical foundation: they are sacred, and we would be ready to make sacrifices to defend them. You can count on Demianists acting in accordance with their 13 axioms and that, even in our mistakes, we would remain honest. Dishonesty would disqualify a Demianist: even if it did not constitute a crime, it is something for which he should apologize.</p>
+
+    <p>Some may see us as naïve or not very shrewd for placing so much value on honesty. But we believe that, in the long run, our honest attitude — which will undoubtedly cause us to crash into many walls and obstacles — will earn us the trust of the people.</p>
+
+    <p><span class="number">11.2</span> Despite the cultural safeguards offered by Demianism, building a central power that does not risk becoming abusive and tyrannical is a very complicated problem, and one that is still premature. We have no illusions that it will be easy to solve. But it is a problem that at least we will confront, and to which we will seek to provide increasingly refined answers over the years — answers that leverage technology and use our 13 axioms as both inspiration and limit.</p>
+
+    <p>We are aware that no system can rely solely on the good will of men. For this reason, the Demianist central power will have to develop forms that can limit it and protect it from corruption. It will be difficult, but we believe it will become increasingly technically possible. Demianism is not in a hurry. Even if it grows rapidly, it would still take generations to reach power. For now, the priority is to become a living community and a living culture.</p>
+
+    <h3>12. PRESERVING THE DIMENSION OF STRUGGLE</h3>
+
+    <p><span class="number">12.1</span> We believe that preserving our humanity is difficult in a world constantly mediated by technology. The universal basic income we propose — which would make life easier for everyone — risks, if not managed carefully, pushing us into an even deeper decadence than the one already marking our time.</p>
+
+    <p>Humanity is programmed to inhabit the dimension of struggle. If there were no good reasons to fight, we would invent futile and mad ones, or we would become apathetic. If we allowed ourselves to be guided, as happens today, by an excessive desire for security, given the means at our disposal, the risk of losing our essential nature and being condemned to insipid lives devoid of meaning, spontaneity, joy, and communion would be very real. The values of Demianism would be of little use if we ended up like sterilized house cats — though we would probably resemble self-harming, deranged monkeys more than blissful, pampered cats…</p>
+
+    <p><span class="number">12.2</span> Preserving the dimension of struggle, directing it toward acceptable outlets, and accepting the negative consequences that a totalitarian regime might avoid or prevent, is a matter of survival.</p>
+
+    <p>In the book I theorize the dimension of struggle as divided into seven expressions: 1) survival, 2) suffering, 3) competition, 4) reproduction, 5) conflict, 6) identity and belonging, 7) meaning and purpose. An entire chapter is dedicated to explaining how to sublimate the dimension of struggle in ways that can serve us well and add salt to life, while avoiding its most destructive manifestations (in particular war, which, given the means available, risks annihilating us en masse).</p>
+
+    <p><span class="number">12.3</span> The more the dimension of struggle is castrated, the more powerfully it tends to re-emerge. Our frustrations accumulate like steam in a pressure cooker, which sooner or later explodes.</p>
+
+    <p>We were made to struggle. If we were not, we would not be here to talk about it. A humanity kept in captivity like animals in a zoo would serve little purpose, could not fulfill its mission, and would deserve to go extinct.</p>
+
+    <h2>FINAL WORDS</h2>
+      <p>Here ends the Manifesto for a Demianist Civilization — my strong interpretation of the 13 axioms with which I aim to speak to the people of today, as a son of the West, to point toward a path of salvation in these digital times.</p>
+      <p>It is a bold manifesto that does not care about being controversial. I have no illusion that it is exhaustive: it gives many answers but raises many questions (which are welcome, as is the debate). Take it as a starting point.</p>
+      <p>I expect it will make many turn up their noses and that it will attract me more prejudice than favor — also because it is objectively strange that all this should emerge from a single man, and moreover from an odd Italian artist with little recognition. I accept the prejudice. For my part I can say: this is what I had, this is what I could do, this is what I had to do.</p>
+      <p>I could have created Demianism ten years ago, but I did not see the necessity or the urgency. Finding ourselves today in such a rapid and profound decadence, seeing great disasters on the horizon and no light of hope, I have lit the light that — without my wanting or deserving it — was infused in me. As Hölderlin (quoted by Heidegger) said: “where the danger is, grows the saving power also”.</p>
+      <p>I don’t forget that Demianism is nothing without you. Only a community can turn it into a living culture. If it remained only with me, it would be a culture dead in its cradle.</p>
+      <p>Will I have managed to ignite the flame of Demianism in the hearts and minds of some? Will the first nucleus of the Demianist community be born? It is hard to say — it will truly require the hand of Providence.</p>
+      <p>I hope at least to find sympathizers willing to support this civilizational mission through donations, or by collecting my art. At the present moment, simply being put in a position to dedicate myself to my work would already be a great achievement. Everything I am giving you, I am giving freely — even though it has cost me a great deal.</p>
+      <p>The time of Demianism begins now. If I have managed to bring you a light of hope, I ask you to help it take root and grow into a living culture, capable of bringing the change we need in order to survive, remain free and human, live with dignity, and prosper in this digital era that will accompany our species for the rest of its journey.</p>
+      <p>May you be a mirror in which I can reflect myself, and water from which I can drink — and may I be the same for you.</p>
+      <p>Barabeke</p>
+
+    <div class="links">
+      <h3>LINKS</h3>
+      <p><a href="https://demianism.org" target="_blank">demianism.org</a> — Here you will find the book to download and links to make donations (both by card and crypto).</p>
+      <p>The Revealed Doctrine — NFT open mint to collect featuring the 13 axioms of Demianism.</p>
+      <p><a href="https://linktr.ee/barabeke" target="_blank">The Art of Barabeke</a> — Book with an overview of Barabeke’s art, available for free.</p>
+      <p>Ritorno a Eden — Novel/saga di Barabeke, the indirect literary vehicle for Demianism. Also free (only in Italian for now).</p>
+    </div>
+
+    <footer>
+      <img src="demianismlogo.png" alt="Demianism Logo" class="footer-logo">
+      <div>
+        © 2026 <a href="https://linktr.ee/barabeke" target="_blank">Barabeke</a>
+      </div>
+      <div>
+        Content licensed under CC BY-NC-ND 4.0
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
